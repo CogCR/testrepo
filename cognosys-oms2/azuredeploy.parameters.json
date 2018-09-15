@@ -27,7 +27,7 @@
             "value": "azureadmin"
         },
         "_artifactsLocation": {
-            "value": "https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/oms-all-deploy"
+            "value": "https://raw.githubusercontent.com/midjuly/testrepo/master/cognosys-oms2"
         }
     }
 }
