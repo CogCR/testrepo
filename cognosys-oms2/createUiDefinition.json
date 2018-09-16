@@ -1,0 +1,144 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/0.1.2-preview/CreateUIDefinition.MultiVm.json#",
+    "handler": "Microsoft.Compute.MultiVm",
+    "version": "0.1.2-preview",
+    "parameters": {
+        "SETTINGS": [
+            {
+                "name": "omsRecoveryVaultName",
+                "type": "Microsoft.Common.TextBox",
+                "label": "Oms Recovery Vault Name",
+                "toolTip": "The name of the Oms Recovery Vault",
+                "constraints": {
+                    "required": true,
+                    "regex": "^[a-z0-9A-Z-]{3,79}$",
+                    "validationMessage": "The VM Name must be between 3 and 79 characters long and contain letters, numbers and hyphens only."
+                }
+            },
+            {
+                "name": "omsRecoveryVaultRegion",
+                "type": "Microsoft.Compute.DropDown",
+                "label": "Oms Recovery Vault Region",
+                "toolTip": "The Region of Oms Recovery Vault",
+                 "allowedValues": [
+			"West US",
+			"East US",
+			"North Europe",
+			"West Europe",
+			"Brazil South",
+			"East Asia",
+			"Southeast Asia",
+			"North Central US",
+			"South Central US",
+			"Japan East",
+			"Japan West",
+			"Australia East",
+			"Australia Southeast",
+			"Central US",
+			"East US 2",
+			"Central India",
+			"South India"
+		      ]
+            },
+            {
+                "name": "omsWorkspaceName",
+                "type": "Microsoft.Common.TextBox",
+                "label": "Oms Workspace Name",
+                "toolTip": "The name of the Oms Workspace",
+                "constraints": {
+                    "required": true,
+                    "regex": "^[a-z0-9A-Z-]{3,79}$",
+                    "validationMessage": "The VM Name must be between 3 and 79 characters long and contain letters, numbers and hyphens only."
+                }
+            },
+	    {
+                "name": "omsWorkspaceRegion",
+                "type": "Microsoft.Compute.DropDown",
+                "label": "Oms Workspace Region",
+                "toolTip": "The Region of Oms Workspace",
+                 "allowedValues": [
+			"East US",
+			"West Europe",
+			"Southeast Asia",
+			"Australia Southeast"
+		      ]
+            },
+	    {
+                "name": "omsAutomationAccountName",
+                "type": "Microsoft.Common.TextBox",
+                "label": "Oms Recovery Vault Name",
+                "toolTip": "The name of the Oms Automation Account",
+                "constraints": {
+                    "required": true,
+                    "regex": "^[a-z0-9A-Z-]{3,79}$",
+                    "validationMessage": "The VM Name must be between 3 and 79 characters long and contain letters, numbers and hyphens only."
+                }
+            },
+	    {
+                "name": "omsAutomationRegion",
+                "type": "Microsoft.Compute.DropDown",
+                "label": "Oms Automation Region",
+                "toolTip": "The Region of Oms Automation",
+                 "allowedValues": [
+			"Japan East",
+			"East US 2",
+			"West Europe",
+			"Southeast Asia",
+			"South Central US",
+			"North Europe",
+			"Canada Central",
+			"Australia Southeast",
+			"Central India",
+			"Japan East"
+		      ]
+            },
+            {
+                "name": "azureAdmin",
+                "type": "Microsoft.Compute.UserNameTextBox",
+                "label": "Username",
+                "toolTip": "Admin username",
+                "constraints": {
+                    "required": true
+                }
+            },
+            {
+                "name": "azureAdminPwd",
+                "type": "Microsoft.Common.PasswordBox",
+		  "label": {
+		    "password": "Password",
+		    "confirmPassword": "Confirm password"
+		  },
+		  "toolTip": "",
+		  "constraints": {
+		    "required": true,
+		    "regex": "",
+		    "validationMessage": ""
+		  },
+		  "options": {
+		    "hideConfirmation": false
+		  },
+		  "visible": true
+            },
+	    {
+                "name": "_artifactsLocation",
+                "type": "Microsoft.Common.TextBox",
+                "label": "The base URI where artifacts required by this template are located",
+                "toolTip": "_artifacts Location",
+		"defaultValue": "https://raw.githubusercontent.com/midjuly/testrepo/master/cognosys-oms2"
+            },
+	    {
+                "name": "_artifactsLocationSasToken",
+                "type": "Microsoft.Common.TextBox",
+                "label": "Oms Recovery Vault Name",
+                "toolTip": "The name of the Oms Automation Account",
+                "constraints": {
+                    "required": true,
+                    "regex": "^[a-z0-9A-Z-]{3,79}$",
+                    "validationMessage": "The VM Name must be between 3 and 79 characters long and contain letters, numbers and hyphens only."
+                }
+            }
+        ],
+        "outputs": {
+        }
+    }
+}
